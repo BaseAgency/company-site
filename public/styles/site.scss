@@ -1,8 +1,12 @@
-@import "site/variables";
+@import "normalize";
+@import "components/fonts";
+@import "utils/variables";
+@import "utils/mixins";
 
 
 // Site Styles
 // ===========
 
 // Add your own site style includes here
-@import "site/layout";
+@import "components/global";
+@import "components/layout";

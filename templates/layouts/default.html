@@ -33,7 +33,7 @@
 	</head>
 	<body>
 		{# BODY #}
-		<div id="body">
+		<main>
 			{# NOTE:
 			   There is no .container wrapping class around body blocks to allow more flexibility in design.
 			   Remember to include it in your templates when you override the intro and content blocks! #}
@@ -47,7 +47,7 @@
 
 			{# The content block should contain the body of your template"s content #}
 			{% block content %}{% endblock %}
-		</div>
+		</main>
 
 
 		{# FOOTER #}
@@ -56,6 +56,7 @@
 		</footer>
 
         {# JAVASCRIPT #}
+ 
 
 		{# The KeystoneJS Content Editor provides support for ks-editable data attributes,
 			which generate links to edit content for users who can access Keystone #}

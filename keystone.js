@@ -15,7 +15,6 @@ keystone.init({
 	'name': 'Base Agency',
 	'brand': 'Base Agency',
 
-	'sass': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': ['templates', 'templates/views'],
