@@ -1,3 +1,17 @@
 .container {
-	lost-center: 1200px;
+	lost-center: 90vw;
+}
+
+@include breakpoint(medium) {
+    .container {
+	    lost-center: 88vw;
+    }
+}
+
+@include breakpoint(large) {
+	@lost gutter 60px;
+	
+    .container {
+	    lost-center: 1300px;
+    }
 }

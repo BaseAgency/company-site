@@ -4,12 +4,81 @@
 
 body {
 	background-color: $light-grey;
-	border: 7px solid #000;
+	font: {
+		family: $serif;
+		size: $font-size-base;
+	};
 	min-height: 100vh;
+	padding-top: 35px;
+}
+
+h1 {
+	@include font-scalable($responsive-h1)
+	font: {
+		family: $sans-serif-bold;
+	}
+}
+
+h2 {
+	@include font-scalable($responsive-h2);
+}
+
+h3 {
+	@include font-scalable($responsive-h3);
+	font: {
+		family: $sans-serif;
+	};
+	margin-bottom: 0;
+	padding-bottom: 10px;
+	position: relative;
+
+	&:before {
+		@include pseudo;
+		background-color: $medium-grey;
+		bottom: 0;
+		height: 1px;
+		left: 0;
+		width: 16px;
+	}
+}
+
+a {
+	color: #000;
+	display: inline-block;
+	opacity: 1;
+	position: relative;
+	text-decoration: none;
+	transition: opacity 0.25s linear;
+
+	&:before {
+		@include pseudo;
+		background-color: #000;
+		bottom: 0;
+		height: 1px;
+		opacity: 1;
+		width: 100%;
+	}
+
+	&:hover {
+        opacity: 0.65;
+
+        &:before {
+        	opacity: 0.65;
+        }
+	}
 }
 
 @include breakpoint(medium) {
 	body {
-		border-width: 15px;
+        border: 10px solid #000;
+        padding-top: 50px;
 	}
 }
+
+@include breakpoint(large) {
+	body {
+        border-width: 15px;
+        padding-top: 70px;
+	}
+}
+

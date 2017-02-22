@@ -1,14 +1,18 @@
-$light-grey: #f5f5f5;
+$small-max: 767px;
+$medium-max: 1023px;
+$medium-min: 768px;
+$large: 1024px;
+$extra-large: 1300px;
 
-$font-size-base: 14px;
+$light-grey: #f5f5f5;
+$medium-grey: #c2c2c2;
+
+$font-size-base: 16px;
 
 $serif: 'SortsMillGoudy';
 $sans-serif: 'GroteskMedium';
 $sans-serif-bold: 'GroteskBold';
 
-// $responsive-h1: 48px, 60px, 72px;
-
-$small-max: 767px;
-$medium-max: 1023px;
-$medium-min: 768px;
-$large: 1024px;
+$responsive-h1: 3rem, 4.5rem, 5.125rem;
+$responsive-h2: 1.35rem, 2.2rem, 2.625rem;
+$responsive-h3: 0.75rem, 0.75rem, 0.75rem;

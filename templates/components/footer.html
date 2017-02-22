@@ -1,39 +1,45 @@
-<footer>
-    {% for item in global %}
-        {% if item.location.show %}
-            <div class="footer-section footer-address">
-                <p>
-                    {{ item.location.address.street1|safe }}
+<footer class="footer">
+    <div class="container">
+	    {% for item in global %}
+	        {% if item.location.show %}
+	            <div class="footer__section footer__address">
+	                <p>
+	                    {{ item.location.address.street1|safe }}
 
-                    {%if item.location.address.street2|length %}
-                         {{ item.location.address.street2|safe }}
-                    {% endif %}
-                </p>
+	                    {%if item.location.address.street2|length %}
+	                         {{ item.location.address.street2|safe }}
+	                    {% endif %}
+	                </p>
 
-                <p>
-                    {{ item.location.address.suburb|safe }}, {{ item.location.address.state|safe }} {{ item.location.address.postcode|safe }}
-                </p>
+	                <p>
+	                    {{ item.location.address.suburb|safe }}, {{ item.location.address.state|safe }} {{ item.location.address.postcode|safe }}
+	                </p>
 
-                {%if item.phone.show %}
-                    <p>{{ item.phone.number|safe }}</p>
-                {% endif %}
-            </div>
-        {% endif %}
-        
-        {%if item.contactEmail.show or item.careersEmail.show %}
-	        <div class="footer-section footer-emails">
-	            {%if item.contactEmail.show %}
-	                <a href="mailto:{{ item.contactEmail.address }}">{{ item.contactEmail.address }}</a>
-	            {% endif %}
+	                {%if item.phone.show %}
+	                    <p>{{ item.phone.number|safe }}</p>
+	                {% endif %}
+	            </div>
+	        {% endif %}
+	        
+	        {%if item.contactEmail.show or item.careersEmail.show %}
+		        <div class="footer__section footer__emails">
+		            {%if item.contactEmail.show %}
+		                <p>
+		                    <a href="mailto:{{ item.contactEmail.address }}">{{ item.contactEmail.address }}</a>
+		                </p>
+		            {% endif %}
 
-	            {%if item.careersEmail.show %}
-	                <a href="mailto:{{ item.careersEmail.address }}">{{ item.careersEmail.address }}</a>
-	            {% endif %}                
+		            {%if item.careersEmail.show %}
+		                <p>
+		                    <a href="mailto:{{ item.careersEmail.address }}">{{ item.careersEmail.address }}</a>
+		                </p>
+		            {% endif %}                
+		        </div>
+		    {% endif %}
+
+	        <div class="footer__section footer__copyright">
+	        	<p>Copyright Base Agency 2016-2017</p>
 	        </div>
-	    {% endif %}
-
-        <div class="footer-section footer-copyright">
-        	<p>Copyright Base Agency 2016-2017</p>
-        </div>
-    {% endfor %}
+	    {% endfor %}
+	</div>
 </footer>

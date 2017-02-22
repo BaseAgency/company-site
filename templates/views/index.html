@@ -1,7 +1,7 @@
 {% extends "layouts/default.html" %}
 
 {% block content %}
-	<div class="container">
+	<div class="container content__container">
         {% include "components/nav.html" %}
 
         {% for page in pages %}
@@ -12,26 +12,26 @@
 	        </header>
 
 	        <section class="information">
-                <article class="information_section-1">
+                <article class="information__section information__section-1">
                 	<h3>{{ page.textSection1.title|safe }}</h3>
                     
-                    <div class="information_section-content">
+                    <div class="information__section-content">
                 	    {{ page.textSection1.content|safe }}
                 	</div>
                 </article>
 
-                <article class="information_section-2">
+                <article class="information__section information__section-2">
                     <h3>{{ page.textSection2.title|safe }}</h3>
                     
-                    <div class="information_section-content">
+                    <div class="information__section-content">
                 	    {{ page.textSection2.content|safe }}
                 	</div>
                 </article>
 
-                <article class="information_section-3">
+                <article class="information__section information__section-3">
                     <h3>{{ page.textSection3.title|safe }}</h3>
                     
-                    <div class="information_section-content">
+                    <div class="information__section-content">
                 	    {{ page.textSection3.content|safe }}
                 	</div>
                 </article>

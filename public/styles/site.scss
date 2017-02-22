@@ -3,10 +3,13 @@
 @import "utils/variables";
 @import "utils/mixins";
 
-
-// Site Styles
+// Site Components
 // ===========
-
-// Add your own site style includes here
 @import "components/global";
 @import "components/layout";
+@import "components/nav";
+@import "components/footer";
+
+// Site Pages
+// ===========
+@import "pages/home";

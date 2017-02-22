@@ -1,0 +1,27 @@
+.global-nav {
+	display: flex;
+	width: 100%;
+
+	a {
+		&:before {
+			display: none;
+		}
+	}
+
+	&__logo {
+		align-self: flex-start;
+        font: {
+        	family: $sans-serif-bold;
+        	size: 0.9rem;
+        };
+        text-transform: uppercase;
+	}
+
+	&__contact {
+		font: {
+        	family: $sans-serif;
+        	size: 0.85rem;
+        };
+        margin-left: auto;
+	}
+}
