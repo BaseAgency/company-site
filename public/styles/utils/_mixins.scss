@@ -1,0 +1,51 @@
+@mixin breakpoint($point) {
+	@if $point == large {
+		@media (min-width: $large) {
+			@content;
+		}
+	} @else if $point == medium-max {
+		@media (max-width: $medium-max) {
+			@content;
+		}
+	} @else if $point == medium {
+		@media (min-width: $medium-min) {
+			@content;
+		}
+	} @else if $point == small {
+		@media (max-width: $small-max)  {
+			@content;
+		}
+	}
+}
+
+@mixin font-scalable($size, $line-height:false) {
+	font-size: nth($size, 1);
+
+	@if $line-height {
+		line-height: $line-height;
+	}
+
+	@if nth($size, 2) != nth($size, 1) {
+		@include breakpoint(medium) {
+			font-size: nth($size, 2);
+		}
+	}
+
+	@if nth($size, 3) != nth($size, 2) {
+		@include breakpoint(large) {
+			font-size: nth($size, 3);
+		}
+	}
+}
+
+@mixin hide-text {
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+}
+
+@mixin pseudo() {
+	content: '';
+	display: block;
+	position: absolute;
+}

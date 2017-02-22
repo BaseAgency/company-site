@@ -2,6 +2,42 @@
 
 {% block content %}
 	<div class="container">
-        
+        {% include "components/nav.html" %}
+
+        {% for page in pages %}
+            <header>
+	            <h1>{{ page.title|safe }}</h1>
+
+	            <h2>{{ page.subtitle|safe }}</h2>
+	        </header>
+
+	        <section class="information">
+                <article class="information_section-1">
+                	<h3>{{ page.textSection1.title|safe }}</h3>
+                    
+                    <div class="information_section-content">
+                	    {{ page.textSection1.content|safe }}
+                	</div>
+                </article>
+
+                <article class="information_section-2">
+                    <h3>{{ page.textSection2.title|safe }}</h3>
+                    
+                    <div class="information_section-content">
+                	    {{ page.textSection2.content|safe }}
+                	</div>
+                </article>
+
+                <article class="information_section-3">
+                    <h3>{{ page.textSection3.title|safe }}</h3>
+                    
+                    <div class="information_section-content">
+                	    {{ page.textSection3.content|safe }}
+                	</div>
+                </article>
+	        </section> 
+        {% endfor %}
 	</div>
+
+	{% include "components/footer.html" %}
 {% endblock %}

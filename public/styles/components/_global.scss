@@ -4,6 +4,12 @@
 
 body {
 	background-color: $light-grey;
-	border: 15px solid #000;
+	border: 7px solid #000;
 	min-height: 100vh;
+}
+
+@include breakpoint(medium) {
+	body {
+		border-width: 15px;
+	}
 }
