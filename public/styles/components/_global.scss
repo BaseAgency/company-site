@@ -15,7 +15,8 @@ body {
 h1 {
 	@include font-scalable($responsive-h1)
 	font: {
-		family: $sans-serif-bold;
+		family: $sans-serif;
+		font-weight: 700;
 	}
 }
 

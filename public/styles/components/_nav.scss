@@ -11,8 +11,9 @@
 	&__logo {
 		align-self: flex-start;
         font: {
-        	family: $sans-serif-bold;
+        	family: $sans-serif;
         	size: 0.9rem;
+        	weight: 700;
         };
         text-transform: uppercase;
 	}
