@@ -10,7 +10,9 @@
 
 @include breakpoint(large) {
 	@lost gutter 60px;
-	
+}
+
+@include breakpoint($extra-large) {	
     .container {
 	    lost-center: 1300px;
     }
