@@ -24,16 +24,16 @@
     &__emails {
         a {
         	font-weight: 600;
-        	
-        	&:before {
-        		display: none;
-        	}
         }
     }
 }
 
 @include breakpoint(medium) {
     .footer {
+    	p {
+    		font-size: 0.85rem;
+    	}
+    	
     	.container {
     		padding-top: 10px;
     	}

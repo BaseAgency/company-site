@@ -9,7 +9,7 @@ body {
 		size: $font-size-base;
 	};
 	min-height: 100vh;
-	padding-top: 35px;
+	padding-top: 20px;
 }
 
 h1 {
@@ -21,7 +21,8 @@ h1 {
 }
 
 h2 {
-	@include font-scalable($responsive-h2);
+	@include font-scalable($responsive-h2, 1.4);
+	font-weight: normal;
 }
 
 h3 {

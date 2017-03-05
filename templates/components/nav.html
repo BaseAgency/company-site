@@ -1,7 +1,7 @@
 <nav class="global-nav">
     {% for item in global %}
 	    <a class="global-nav__logo" href="{{ item.nav.item1.link}}">{{ item.nav.item1.title|safe }}</a>
-
+        
 	    <a class="global-nav__contact" href="{{ item.nav.item2.link|safe }}">{{item.nav.item2.title|safe }}</a>
 	{% endfor %}
 </nav>
